@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
 import Login from "./Login";
 import Signup from "./Signup";
-import Plant from "./Plant"; // Import Plant component
+import Plant from "./Plant";
+import PlantDetails from "./PlantDetails"; // Import PlantDetails component
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -18,7 +19,7 @@ function App() {
       <div className="pt-16">
         <Routes>
           <Route path="/plants" element={<Plant />} />
-          {/* Add other routes */}
+          <Route path="/plants/:plantId" element={<PlantDetails />} />
         </Routes>
       </div>
     </Router>
