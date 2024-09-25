@@ -4,21 +4,24 @@ import { useNavigate } from "react-router-dom";
 const plantsData = [
   {
     id: 1,
-    title: "Aloe Vera",
-    description: "Aloe Vera is known for its medicinal properties.",
-    image: "https://example.com/aloe-vera.jpg",
+    title: "AYURVEDA",
+    description: "Ayurveda is a traditional Indian medical system that aims to restore balance to the body, mind, and spirit.",
+    image: "src/ayurveda image.jpg",
+    system: "Ayurvedic Herbs",
   },
   {
     id: 2,
-    title: "Snake Plant",
-    description: "Snake plants are great for indoor air purification.",
-    image: "https://example.com/snake-plant.jpg",
+    title: "UNANI",
+    description: "Unani medicine, also known as Yunani medicine, is a traditional system of healing and health maintenance that originated in ancient Greece and later developed in the Middle East and South Asia.",
+    image: "src/unani image.jpeg",
+    system: "Unani Herbs",
   },
   {
     id: 3,
-    title: "Monstera",
-    description: "Monstera is a popular houseplant known for its large leaves.",
-    image: "https://example.com/monstera.jpg",
+    title: "HOMOEOPATHY",
+    description: "Homeopathy is a system of alternative medicine that is based on the principle of meaning that a substance that causes symptoms in a healthy person can, in very small doses, treat similar symptoms in a sick person.",
+    image: "src/Homeopathy image.jpeg",
+    system: "Homeopathic Herbs",
   },
 ];
 
@@ -40,7 +43,7 @@ const Plant = () => {
               <h2 className="text-xl font-semibold mb-2">{plant.title}</h2>
               <p className="text-gray-600 mb-4">{plant.description}</p>
               <button
-                onClick={() => navigate(`/plants/${plant.id}`)}
+                onClick={() => navigate(`/plants/${plant.id}?system=${plant.system}`)}
                 className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
               >
                 Explore
