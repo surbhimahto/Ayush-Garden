@@ -7,27 +7,26 @@ import Plant from "./Plant";
 import PlantDetails from "./PlantDetails";
 import Bookmark from "./Bookmark";
 import QuizModal from "./QuizModal";
-// import Home from "./Home";
 import About from "./About";
+import ImageCarousel from "./ImageCarousel"; // Import the ImageCarousel component
+
 function App() {
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
   const [showQuiz, setShowQuiz] = useState(false);
-
   const [bookmarkedItems, setBookmarkedItems] = useState([]);
 
   return (
     <Router>
-
       <Navbar setShowLogin={setShowLogin} setShowSignup={setShowSignup} setShowQuiz={setShowQuiz} />
       {showLogin && <Login onClose={() => setShowLogin(false)} />}
       {showSignup && <Signup onClose={() => setShowSignup(false)} />}
       {showQuiz && <QuizModal onClose={() => setShowQuiz(false)} />}
 
       <div className="pt-16">
+        <ImageCarousel /> {/* Include the ImageCarousel component here */}
         <Routes>
-        {/* <Route path="/Home" element={<Home />} /> */}
-        <Route path="/About" element={<About />} />
+          <Route path="/About" element={<About />} />
           <Route path="/plants" element={<Plant />} />
           <Route
             path="/plants/:plantId"
