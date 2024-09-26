@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./Navbar";
-import Login from "./Login";
-import Signup from "./Signup";
-import Plant from "./Plant";
-import PlantDetails from "./PlantDetails";
-import Bookmark from "./Bookmark";
-import QuizModal from "./QuizModal";
-import About from "./About";
-import ImageCarousel from "./ImageCarousel"; // Import the ImageCarousel component
+import Navbar from "./components/Navbar";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import Plant from "./components/Plant";
+import PlantDetails from "./components/PlantDetails";
+import Bookmark from "./components/Bookmark";
+import QuizModal from "./components/QuizModal";
+import About from "./components/About";
+import Home from "./components/Home";
+
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -24,8 +25,9 @@ function App() {
       {showQuiz && <QuizModal onClose={() => setShowQuiz(false)} />}
 
       <div className="pt-16">
-        <ImageCarousel /> {/* Include the ImageCarousel component here */}
         <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/plants" element={<Plant />} />
           <Route

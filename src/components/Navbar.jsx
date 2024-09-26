@@ -10,10 +10,9 @@ const Navbar = ({ setShowLogin, setShowSignup, setShowQuiz }) => {
           <Link to="/about" className="text-gray-700 hover:text-blue-600 font-medium">About</Link>
           <Link to="/plants" className="text-gray-700 hover:text-blue-600 font-medium">Plants</Link>
           <Link to="/bookmark" className="text-gray-700 hover:text-blue-600 font-medium">Bookmark</Link>
-          
         </div>
         <div className="flex space-x-4">
-        <button
+          <button
             onClick={() => setShowQuiz(true)}
             className="text-gray-700 hover:text-blue-600 font-medium"
           >
