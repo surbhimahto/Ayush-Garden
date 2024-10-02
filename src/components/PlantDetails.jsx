@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import ashwagandhaImage from './Ashwagandha image.jpg';
-import brahmiImage from './Brahmi image.jpg';
-import AmlaImage from './Amla Image.jpeg';
-import GuavaImage from './guava image.jpg';
-import BelladonnaImage from './Belladonna image.jpeg';
+import ashwagandhaImage from '../assets/images/Ashwagandha image.jpg';
+import brahmiImage from '../assets/images/Brahmi image.jpg';
+import AmlaImage from '../assets/images/Amla Image.jpeg';
+import GuavaImage from '../assets/images/guava image.jpg';
+import BelladonnaImage from '../assets/images/Belladonna image.jpeg';
 // Plant Data
 const plantSubData = {
   1: [
