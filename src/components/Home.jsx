@@ -1,12 +1,11 @@
 import React from 'react';
-import Navbar from "./Navbar";
 import ImageCarousel from "./ImageCarousel"; // Import the ImageCarousel component
+
 const Home = () => {
     return (
-        <>
-            <Navbar />
+        <div className="py-8">
             <ImageCarousel />
-        </>
+        </div>
     );
 };
 

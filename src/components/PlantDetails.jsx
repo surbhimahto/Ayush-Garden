@@ -39,15 +39,15 @@ const plantSubData = {
       videoUrl: "#",
     },
   ],
-  3: [
-    {
-      title: "Belladonna",
-      description: "Scientific Name- Atropa belladonna",
-      description2: "It is used for fever, inflammation, and headaches",
-      image: BelladonnaImage,
-      videoUrl: "#",
-    },
-  ]
+  3:[
+  {
+    title: "Belladonna",
+    description: "Scientific Name- Atropa belladonna",
+    description2: "It is used for fever, inflammation, and headaches",
+    image: BelladonnaImage,
+    videoUrl: "#",
+  },
+]
 };
 
 // PlantDetails Component
